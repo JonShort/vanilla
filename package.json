@@ -1,0 +1,25 @@
+{
+  "name": "vanilla",
+  "version": "1.0.0",
+  "description": "Vanilla Javascript in 2018??",
+  "main": "src/index.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No tests yet\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonShort/vanilla.git"
+  },
+  "keywords": [
+    "vanilla",
+    "javascript",
+    "sass"
+  ],
+  "author": "Jon Short",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonShort/vanilla/issues"
+  },
+  "homepage": "https://github.com/JonShort/vanilla#readme"
+}
