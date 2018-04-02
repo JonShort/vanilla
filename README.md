@@ -1,7 +1,6 @@
 <h1 align="center">
-  <p style="font-size: 80px; margin: 0;">
-  🍦
-  </p>
+  :icecream:
+  <br />
   Vanilla 
 </h1>
 
