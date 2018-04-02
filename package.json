@@ -5,8 +5,10 @@
   "main": "src/index.js",
   "private": true,
   "scripts": {
-    "test": "echo \"No tests yet\" && exit 1",
-    "start": "parcel ./src/index.html"
+    "flow": "flow",
+    "flow-typed": "flow-typed",
+    "start": "parcel ./src/index.html",
+    "test": "echo \"No tests yet\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,11 +24,14 @@
     "url": "https://github.com/JonShort/vanilla/issues"
   },
   "homepage": "https://github.com/JonShort/vanilla#readme",
-  "dependencies": {},
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.69.0",
+    "flow-typed": "^2.4.0",
     "parcel-bundler": "^1.7.0"
   }
 }

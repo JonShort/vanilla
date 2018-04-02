@@ -1,9 +1,9 @@
 [include]
 ./src/**/*.js
-./config/sass.js
 
 [ignore]
-.*/build/.*
+.*/dist/.*
+.*node_modules/.*
 
 [libs]
-./node_modules
+./flow-typed/
