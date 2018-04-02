@@ -21,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/JonShort/vanilla/issues"
   },
-  "homepage": "https://github.com/JonShort/vanilla#readme"
+  "homepage": "https://github.com/JonShort/vanilla#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.69.0",
+    "sass": "^1.1.1"
+  }
 }
