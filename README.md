@@ -2,7 +2,7 @@
   <p style="font-size: 80px; margin: 0;">
   🍦
   </p>
-  Vanilla Jonshort
+  Vanilla 
 </h1>
 
 With all the frontend frameworks abstracting a lot of the JS that I use on a daily basis, I thought it'd be fun to write some vanilla JS.
