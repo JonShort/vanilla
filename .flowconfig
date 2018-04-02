@@ -1,0 +1,9 @@
+[include]
+./src/**/*.js
+./config/sass.js
+
+[ignore]
+.*/build/.*
+
+[libs]
+./node_modules
