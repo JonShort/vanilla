@@ -1,26 +1,16 @@
 // @flow
-import TextBox, { TextBoxInterface } from "./components/textbox/TextBox"
+import {
+  Button,
+  TextBox,
+} from './components';
 
 const postDOM: Function = () => {
-  const theText: string = 'some text here';
-  const textBox: ?HTMLElement = document.getElementById('textbox');
-  const setTextBox = () => {
-    if (textBox) {
-      textBox.innerHTML = theText;
-    }
-  };
+  const TextButton = new Button();
+  TextButton.text = 'Click me please!';
+  TextButton.onClick = () => console.log('Button clicked');
+  TextButton.classes = ['button-primary'];
 
-  setTimeout(setTextBox, 1500);
-
-  const theTextBox: TextBoxInterface = new TextBox;
-
-  console.log(theTextBox.text);
-
-  theTextBox.changeText('This text has changed');
-
-  console.log(theTextBox.text);
-
-  return;
+  TextButton.create();
 }
 
 export default postDOM;
