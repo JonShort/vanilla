@@ -1,9 +1,9 @@
 // @flow
 interface I {
-  create: Function,
-  classes: Array<string>,
-  onClick: ?Function,
-  text: ?string,
+  create: Function;
+  classes: Array<string>;
+  onClick: ?Function;
+  text: ?string;
 }
 
 class Button implements I {
@@ -15,7 +15,7 @@ class Button implements I {
     if (this.onClick) {
       this.onClick(event);
     }
-  }
+  };
 
   // allow this create function to accept an object with the options in it?
   create = () => {
@@ -34,7 +34,7 @@ class Button implements I {
     // Render dom & add listener
     body.appendChild(dom);
     dom.addEventListener('click', this.handleClick);
-  }
+  };
 }
 
 export default Button;

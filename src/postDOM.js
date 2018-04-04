@@ -1,8 +1,5 @@
 // @flow
-import {
-  Button,
-  TextBox,
-} from './components';
+import { Button, TextBox } from './components';
 
 const postDOM: Function = () => {
   const TextButton = new Button();
@@ -11,6 +8,6 @@ const postDOM: Function = () => {
   TextButton.classes = ['button-primary'];
 
   TextButton.create();
-}
+};
 
 export default postDOM;
