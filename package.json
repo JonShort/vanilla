@@ -8,7 +8,9 @@
     "flow": "flow",
     "flow-typed": "flow-typed",
     "start": "parcel ./src/index.html",
-    "test": "echo \"No tests yet\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "prettier": "prettier -l src/*.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +35,8 @@
     "babel-preset-flow": "^6.23.0",
     "flow-bin": "^0.69.0",
     "flow-typed": "^2.4.0",
-    "parcel-bundler": "^1.7.0"
+    "jest": "^22.4.3",
+    "parcel-bundler": "^1.7.0",
+    "prettier": "1.11.1"
   }
 }
