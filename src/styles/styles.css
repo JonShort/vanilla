@@ -1,3 +1,7 @@
 .test {
     background: red;
 }
+
+button {
+    display: block;
+}

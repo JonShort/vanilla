@@ -1,17 +1,8 @@
 // @flow
-interface I {
-  create: Function;
-  classes: Array<string>;
-  dom: HTMLElement;
-  onClick: ?Function;
-  parent: HTMLElement | null;
-  text: ?string;
-}
-
 type UpdateOptions = {
-  classes: ?Array<string>,
-  onClick: ?Function,
-  text: ?string,
+  classes?: Array<string>,
+  onClick?: Function,
+  text?: string,
 };
 
 type AllOptions = {
@@ -19,12 +10,25 @@ type AllOptions = {
   parent: HTMLElement,
 };
 
+interface I {
+  +create: (opts: AllOptions) => void;
+  +destroy: () => void;
+}
+
 class Component implements I {
-  classes = [];
-  dom = document.createElement('button');
-  parent = document.body;
-  onClick = null;
-  text = null;
+  classes: Array<string>;
+  dom: HTMLElement;
+  onClick: ?Function;
+  parent: HTMLElement | null;
+  text: ?string;
+
+  constructor(dom: HTMLElement) {
+    this.dom = dom;
+    this.classes = [];
+    this.parent = null;
+    this.onClick = null;
+    this.text = null;
+  }
 
   handleClick = (event: Event) => {
     if (this.onClick) {
@@ -57,9 +61,8 @@ class Component implements I {
     // Set parent and dom to be rendered
     this.parent = parent;
     if (!this.parent) {
-      throw new Error('Cannot render Button when no parent provided!');
+      throw new Error('Cannot render Component when no parent provided!');
     }
-    this.dom = document.createElement('button');
 
     this.update(rest);
 
@@ -67,6 +70,12 @@ class Component implements I {
     if (this.parent && this.dom) {
       this.parent.appendChild(this.dom);
       this.dom.addEventListener('click', this.handleClick);
+    }
+  };
+
+  destroy = () => {
+    if (this.parent && this.dom) {
+      this.parent.removeChild(this.dom);
     }
   };
 }
